@@ -94,3 +94,8 @@
   margin-top: 10em;
 }
 
+.ratingStar{
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+}

@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import styles from "./page.module.css";
 import TextField from '@mui/material/TextField';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
@@ -29,6 +28,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Chip from '@mui/material/Chip';
 import EditIcon from '@mui/icons-material/Edit';
 import Avatar from '@mui/material/Avatar';
+import Image from 'next/image';
 
 export default function Home() {
     
@@ -285,8 +285,16 @@ const [open, setOpen] = useState(false);
               <Checkbox {...label} />
               </TableCell>
               <TableCell align="left">
-                <div styles={{display:'flex',justifyContent:"flex-start",alignItems:"center"}}>
-               {row.name}
+                <div styles={{display:'flex',justifyContent:"centert",alignItems:"center"}}>
+                <Image
+               className={styles.ratingStar}
+               src="/me.jpeg"
+               alt="user image"
+               width={20}
+               height={19.02}
+               priority
+          
+               /> <span style={{marginTop:"-10px"}}>{row.name}</span>
                 </div>
               </TableCell>
               <TableCell align="left">{row.title}</TableCell>
